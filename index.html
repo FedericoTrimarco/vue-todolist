@@ -15,7 +15,36 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="todoListApp" class="container900px bord-black">
+        <header class="text-center">
+            <img class="w-50" src="./team-fox-logo.png" alt="team-fox-logo">
+        </header>
+
+        <section class="d-flex bord-black input-text">
+            <input type="text" placeholder="Inserisci todo" class="flex-grow-1 border-0 border-bottom mx-5">
+
+            <button class="icon btn btn-primary rounded-pill">AGGIUNGI</button>
+        </section>
+
+        <main class="bord-black mt-4 mx-5">
+            <ol>
+                <li v-for="(todo, index) in todos" class="d-flex p-3 todo align-items-center">
+                    <span 
+                         class="flex-grow-1"
+                         :class="{completed: todo.completed}"
+                        >
+                        {{ todo.text }}
+                    </span>
+                    <i class="trash-icon fas fa-trash-alt" @click="deleteTodo(index)"></i>
+                </li>
+            </ol>
+        </main>
+    </div>
+
+
+
+
+
     <!-- MY JS -->
     <script src="./js/main.js"></script>
 </body>

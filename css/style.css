@@ -1,0 +1,40 @@
+/* GENERAL */
+.container900px{
+    width: 900px;
+    margin: 0 auto;
+}
+/* UTILITIES */
+/* .bord-black{
+    border: 1px solid black;
+} */
+
+.input-text input:focus{
+    outline: 2px solid #0d6efd;
+}
+
+main{
+    background-color: #85a9e0;
+}
+
+li{
+    border-bottom: 1px solid black;
+}
+li:last-child{
+    border-bottom: none;
+}
+.trash-icon:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* .todo::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    background-color: #fff;
+} */
+.completed{
+    text-decoration: line-through;
+}
