@@ -26,7 +26,7 @@ li:last-child{
     color: red;
     cursor: pointer;
 }
-.square{
+.todo::before{
     content: '';
     width: 20px;
     height: 20px;
@@ -38,7 +38,7 @@ li:last-child{
 .completed .li-todo{
     text-decoration: line-through;
 }
-.todo.completed .square{
+.todo.completed::before{
     background: green;
 }
 span{
