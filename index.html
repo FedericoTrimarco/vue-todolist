@@ -21,9 +21,15 @@
         </header>
 
         <section class="d-flex bord-black input-text">
-            <input type="text" placeholder="Inserisci todo" class="flex-grow-1 border-0 border-bottom mx-5">
+            <input 
+                type="text" 
+                placeholder="Inserisci todo" 
+                class="flex-grow-1 border-0 border-bottom mx-5" 
+                v-model.trim="newTodo" 
+                @keyup.enter="addNewTodo"
+            >
 
-            <button class="icon btn btn-primary rounded-pill">AGGIUNGI</button>
+            <button class="icon btn btn-primary rounded-pill" @click="addNewTodo">AGGIUNGI</button>
         </section>
 
         <main class="bord-black mt-4 mx-5">
@@ -32,6 +38,7 @@
                     <span 
                          class="flex-grow-1"
                          :class="{completed: todo.completed}"
+                         @click="changeValue(index)"
                         >
                         {{ todo.text }}
                     </span>

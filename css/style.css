@@ -38,3 +38,6 @@ li:last-child{
 .completed{
     text-decoration: line-through;
 }
+span{
+    cursor: pointer;
+}

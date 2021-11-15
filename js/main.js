@@ -38,11 +38,24 @@ const app = new Vue({
                 completed: true,
             },
         ],
-        newTodo = '',
+       newTodo : '',
     },
     methods: {
         deleteTodo(index){
             this.todos.splice(index, 1)
+        }, 
+        addNewTodo(){
+            if(this.newTodo != ''){
+                this.todos.unshift({
+                    text: this.newTodo,
+                    completed: false,
+                });
+
+                this.newTodo = '';
+            }
+        },
+        changeValue(index){
+            this.todos[index].completed = !this.todos[index].completed;
         },
     }
 });
