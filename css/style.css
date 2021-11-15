@@ -35,7 +35,7 @@ li:last-child{
     background: #fff;
     transition: background .3s;
 }
-.completed .li-todo{
+.completed .li-todo-text{
     text-decoration: line-through;
 }
 .todo.completed::before{
