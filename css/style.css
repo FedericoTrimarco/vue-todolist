@@ -39,7 +39,7 @@ li:last-child{
     text-decoration: line-through;
 }
 .todo.completed::before{
-    background: green;
+    background: rgb(68, 228, 68);
 }
 span{
     cursor: pointer;
