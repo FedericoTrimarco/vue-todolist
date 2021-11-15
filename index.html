@@ -15,7 +15,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="todoListApp" class="container900px bord-black">
+    <div id="todoListApp" class="container-xl bord-black">
         <header class="text-center">
             <img class="w-50" src="./team-fox-logo.png" alt="team-fox-logo">
         </header>
@@ -33,18 +33,25 @@
         </section>
 
         <main class="bord-black mt-4 mx-5">
-            <ol>
-                <li v-for="(todo, index) in todos" class="d-flex p-3 todo align-items-center">
+            <ol v-if="todos.length > 0">
+                <li 
+                    v-for="(todo, index) in todos" 
+                    class="d-flex p-3 todo align-items-center"
+                    :class="{completed: todo.completed}"
+                >
+
+                    <div class="square"></div>
+
                     <span 
-                         class="flex-grow-1"
-                         :class="{completed: todo.completed}"
+                         class="flex-grow-1 li-todo"
                          @click="changeValue(index)"
-                        >
+                    >
                         {{ todo.text }}
                     </span>
                     <i class="trash-icon fas fa-trash-alt" @click="deleteTodo(index)"></i>
                 </li>
             </ol>
+            <h2 v-else>NON CI SONO ELEMENTI NELLA LISTA</h2>
         </main>
     </div>
 

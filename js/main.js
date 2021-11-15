@@ -58,4 +58,4 @@ const app = new Vue({
             this.todos[index].completed = !this.todos[index].completed;
         },
     }
-});
+}); 

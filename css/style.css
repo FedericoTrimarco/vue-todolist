@@ -1,5 +1,5 @@
 /* GENERAL */
-.container900px{
+.container{
     width: 900px;
     margin: 0 auto;
 }
@@ -12,7 +12,7 @@
     outline: 2px solid #0d6efd;
 }
 
-main{
+ol{
     background-color: #85a9e0;
 }
 
@@ -26,17 +26,20 @@ li:last-child{
     color: red;
     cursor: pointer;
 }
-
-/* .todo::before{
+.square{
     content: '';
     width: 20px;
     height: 20px;
     border: 1px solid black;
     margin-right: 10px;
-    background-color: #fff;
-} */
-.completed{
+    background: #fff;
+    transition: background .3s;
+}
+.completed .li-todo{
     text-decoration: line-through;
+}
+.todo.completed .square{
+    background: green;
 }
 span{
     cursor: pointer;
