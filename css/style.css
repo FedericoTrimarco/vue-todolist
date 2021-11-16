@@ -1,15 +1,5 @@
-/* GENERAL */
-.container{
-    width: 900px;
-    margin: 0 auto;
-}
-/* UTILITIES */
-/* .bord-black{
-    border: 1px solid black;
-} */
-
 .input-text input:focus{
-    outline: 2px solid #0d6efd;
+    outline: 2px solid #00e165;
 }
 
 ol{
